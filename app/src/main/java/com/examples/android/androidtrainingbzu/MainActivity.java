@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startLongActivity:
                 startActivity(new Intent(this,LongTextActivity.class));
                 break;
+            case R.id.btn_startLifecycleActivity:
+                startActivity(new Intent(this,ActivityLifcycle.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                break;
+
         }
     }
 }

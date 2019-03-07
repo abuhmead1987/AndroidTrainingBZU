@@ -18,7 +18,7 @@
             android:text="@string/show_long_text_activity"
             android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#2A1F42"
+            android:textColor="#FFFFFF"
             android:textAllCaps="false"/>
         <Button
             android:id="@+id/btn_startLifecycleActivity"
@@ -27,7 +27,7 @@
             android:text="Start Lifecycle Activity"
             android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#2A1F42"
+            android:textColor="#FFFFFF"
             android:textAllCaps="false"/>
         <Button
             android:id="@+id/btn_startActivityResul"
@@ -36,8 +36,9 @@
             android:text="Start Result Activity"
             android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#2A1F42"
-            android:textAllCaps="false"/>
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            />
 
     </LinearLayout>
 </ScrollView>

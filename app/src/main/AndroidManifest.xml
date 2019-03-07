@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NameActivity"></activity>
-        <activity android:name=".ForResultsActivity" />
-        <activity android:name=".ActivityLifcycle" />
-        <activity android:name=".LifeCycleOfActivity" />
-        <activity android:name=".LongTextActivity" />
+        <activity android:theme="@style/StyledActivity" android:name=".NameActivity"></activity>
+        <activity android:theme="@style/StyledActivity" android:name=".ForResultsActivity" />
+        <activity android:theme="@style/StyledActivity" android:name=".ActivityLifcycle" />
+        <activity android:theme="@style/StyledActivity" android:name=".LifeCycleOfActivity" />
+        <activity android:theme="@style/StyledActivity" android:name=".LongTextActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

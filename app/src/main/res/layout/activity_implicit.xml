@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ImplicitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="url"
+            android:inputType="textUri"
+            android:text="https://www.google.com/" />
+
+        <Button
+            android:id="@+id/btn_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Open URL" />
+
+        <Button
+            android:id="@+id/btn_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Send Email" />
+
+        <Button
+            android:id="@+id/btn_setAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Set Alarm" />
+
+
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:text="0568474940" />
+
+        <Button
+            android:id="@+id/btn_callMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Call Mobile" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:text="mohammad.kaied@gmail.com" />
+        <Button
+            android:id="@+id/btn_captureImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Capture Image" />
+        <ImageView
+            android:id="@+id/img_capturedImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:maxHeight="300dp"/>
+        <Button
+            android:id="@+id/btn_selectContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="callImplicitIntent"
+            android:text="Select Contact" />
+
+    </LinearLayout>
+
+</ScrollView>

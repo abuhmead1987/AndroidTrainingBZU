@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.examples.android.androidtrainingbzu">
 
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:theme="@style/StyledActivity" android:name=".NameActivity"></activity>
-        <activity android:theme="@style/StyledActivity" android:name=".ForResultsActivity" />
-        <activity android:theme="@style/StyledActivity" android:name=".ActivityLifcycle" />
-        <activity android:theme="@style/StyledActivity" android:name=".LifeCycleOfActivity" />
-        <activity android:theme="@style/StyledActivity" android:name=".LongTextActivity" />
+        <activity android:name=".ImplicitActivity"
+            android:theme="@style/StyledActivity"></activity>
+        <activity
+            android:name=".NameActivity"
+            android:theme="@style/StyledActivity" />
+        <activity
+            android:name=".ForResultsActivity"
+            android:theme="@style/StyledActivity" />
+        <activity
+            android:name=".ActivityLifcycle"
+            android:theme="@style/StyledActivity" />
+        <activity
+            android:name=".LifeCycleOfActivity"
+            android:theme="@style/StyledActivity" />
+        <activity
+            android:name=".LongTextActivity"
+            android:theme="@style/StyledActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

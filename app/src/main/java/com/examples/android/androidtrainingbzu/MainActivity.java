@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startActivityResul:
                 startActivity(new Intent(this,ForResultsActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
                 break;
+            case R.id.btn_startimplicitActivity:
+                startActivity(new Intent(this,ImplicitActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                break;
 
         }
     }

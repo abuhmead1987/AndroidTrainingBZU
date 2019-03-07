@@ -39,6 +39,17 @@
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             />
+        <Button
+            android:id="@+id/btn_startimplicitActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start implicit intent Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            />
+
 
     </LinearLayout>
 </ScrollView>

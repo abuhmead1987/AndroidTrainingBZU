@@ -57,7 +57,7 @@ public class ImplicitActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_email:
                     String mailto = "mailto:" +edt_email.getText().toString()+
-                            "?cc=" + "alice@example.com" +
+                            "?cc=" + "email@example.com" +
                             "&subject=" + Uri.encode("Email Subject") +
                             "&body=" + Uri.encode("Email Body");
                     intent = new Intent(Intent.ACTION_SENDTO);
@@ -101,6 +101,7 @@ public class ImplicitActivity extends AppCompatActivity {
                         }
                         break;
                 case R.id.btn_selectContact:
+                case R.id.edt_phone:
                     intent = new Intent(Intent.ACTION_PICK);
                     intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
                     if (intent.resolveActivity(getPackageManager()) != null) {

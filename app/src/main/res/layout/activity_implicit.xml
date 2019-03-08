@@ -43,15 +43,29 @@
             android:text="Set Alarm" />
 
 
-
-        <EditText
-            android:id="@+id/edt_phone"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Mobile Number"
-            android:inputType="phone"
-            android:text="0568474940" />
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:text="0568474940"/>
+
+            <ImageButton
+                android:id="@+id/btn_selectContact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="callImplicitIntent"
+                android:src="@drawable/ic_contact_phone_black_24dp"
+                android:background="@null"
+                android:layout_gravity="right|center_vertical"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+        </FrameLayout>
 
         <Button
             android:id="@+id/btn_callMobile"
@@ -80,12 +94,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher"
             android:maxHeight="300dp"/>
-        <Button
-            android:id="@+id/btn_selectContact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="callImplicitIntent"
-            android:text="Select Contact" />
+
 
     </LinearLayout>
 

@@ -29,6 +29,7 @@ public class ImplicitActivity extends AppCompatActivity {
         edt_email=findViewById(R.id.edt_email);
         edt_mobile=findViewById(R.id.edt_phone);
         edt_url=findViewById(R.id.edt_url);
+        edt_email.requestFocus();
 
     }
 
@@ -50,6 +51,7 @@ public class ImplicitActivity extends AppCompatActivity {
                     intent = new Intent(Intent.ACTION_VIEW);
                     // Provide data as a URI
                     intent.setData(Uri.parse(edt_url.getText().toString()));
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
                     //Start the activity
                     if (intent.resolveActivity(getPackageManager()) != null) {
                         startActivity(intent);

@@ -28,6 +28,15 @@
             android:onClick="callImplicitIntent"
             android:text="Open URL" />
 
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:text="mohammad.kaied@gmail.com" />
+
         <Button
             android:id="@+id/btn_email"
             android:layout_width="match_parent"
@@ -74,14 +83,6 @@
             android:onClick="callImplicitIntent"
             android:text="Call Mobile" />
 
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="email"
-            android:inputType="textEmailAddress"
-            android:text="mohammad.kaied@gmail.com" />
         <Button
             android:id="@+id/btn_captureImage"
             android:layout_width="match_parent"
@@ -92,7 +93,7 @@
             android:id="@+id/img_capturedImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
+            android:src="@drawable/ic_launcher_background"
             android:maxHeight="300dp"/>
 
 

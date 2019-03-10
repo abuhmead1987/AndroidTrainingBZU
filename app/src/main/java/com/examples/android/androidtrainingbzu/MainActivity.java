@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startimplicitActivity:
                 startActivity(new Intent(this,ImplicitActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
                 break;
+            case R.id.btn_startView1Activity:
+                startActivity(new Intent(this,ViewsActivity_1.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                break;
 
         }
     }

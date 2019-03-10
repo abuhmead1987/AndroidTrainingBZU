@@ -49,6 +49,16 @@
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             />
+        <Button
+            android:id="@+id/btn_startView1Activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start View 1 Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            />
 
 
     </LinearLayout>

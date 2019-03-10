@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cities_list">
+        <item>Ramallah</item>
+        <item>Hebron</item>
+        <item>Tolkarim</item>
+        <item>Nablus</item>
+    </array>
+</resources>

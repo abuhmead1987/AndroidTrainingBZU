@@ -35,4 +35,5 @@ Create an Android project
 "
 
     </string>
+    <string name="map_url"><![CDATA[https://www.openstreetmap.org/directions?engine=graphhopper_car&route=31.9297%2C35.2083%3B31.9198%2C35.2160#map=15/31.9250/35.2110]]></string>
 </resources>

@@ -1,14 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item >
+    <!-- disable state. -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="#CCCCC4"/>
+            <stroke android:color="#CCCCC4" android:width="2dp"/>
+        </shape>
+    </item>
+
+    <!--released state. -->
+    <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <corners android:radius="10sp"></corners>
             <stroke android:color="#00FF0000" android:width="3sp"></stroke>
-            <gradient android:startColor="#008577" android:angle="270"
-                 android:endColor="#00574a"></gradient>
+            <gradient android:startColor="#880e4f" android:angle="270"
+                android:endColor="#AC2E71"></gradient>
         </shape>
     </item>
-    <item android:state_hovered="true">
+
+    <!--pressed state. -->
+    <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <gradient android:startColor="#00574a" android:angle="270"
                 android:endColor="#008577"></gradient>

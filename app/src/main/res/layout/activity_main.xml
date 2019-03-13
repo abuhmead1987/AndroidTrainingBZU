@@ -49,16 +49,7 @@
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             />
-        <Button
-            android:id="@+id/btn_startView1Activity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start View 1 Activity"
-            android:onClick="startNewActivity"
-            android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"
-            />
+
         <Button
             android:id="@+id/btn_startWebviewActivity"
             android:layout_width="match_parent"
@@ -69,5 +60,16 @@
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             />
+
+        <Button
+            android:id="@+id/btn_startView1Activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_butoon"
+            android:onClick="startNewActivity"
+            android:text="Constraint L, Img V, RG, RB, Chk Bx, Spinner and Font"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/abril_fatface"/>
     </LinearLayout>
 </ScrollView>

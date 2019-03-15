@@ -61,6 +61,7 @@
             android:textAllCaps="false"
             />
 
+
         <Button
             android:id="@+id/btn_startView1Activity"
             android:layout_width="match_parent"
@@ -71,5 +72,41 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/abril_fatface"/>
+        <Button
+            android:id="@+id/btn_startDialogsActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Dialogs Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startScaleGestureDetectorActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Scale Gesture Detector Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startMotionEventActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Motion Event Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startMenuActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Menus Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>

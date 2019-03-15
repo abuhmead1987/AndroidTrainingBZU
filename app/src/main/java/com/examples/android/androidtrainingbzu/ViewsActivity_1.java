@@ -8,6 +8,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import com.examples.android.androidtrainingbzu.Adapters.SpinnerCustomAdapter;
 
 import org.w3c.dom.Text;
 
@@ -15,6 +18,9 @@ public class ViewsActivity_1 extends AppCompatActivity {
 
     RadioGroup radioGroup;
     Spinner spinner;
+    String[] countryNames={"India","China","Australia","Portugle","America","New Zealand"};
+    int flags[] = {R.drawable.bar_chart, R.drawable.emp_pic3, R.drawable.ic_app_name, R.drawable.ic_user_icon, R.drawable.rounded_butoon, R.drawable.ic_user_icon};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +28,8 @@ public class ViewsActivity_1 extends AppCompatActivity {
         radioGroup=(RadioGroup)findViewById(R.id.rg_gender);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                switch (checkedId){
                     case 1:
                         Toast.makeText(getApplicationContext(), "Index 1",Toast.LENGTH_LONG).show();
                         break;
@@ -46,5 +52,18 @@ public class ViewsActivity_1 extends AppCompatActivity {
 
             }
         });
+        Spinner spin = (Spinner) findViewById(R.id.spinner_custom);
+        SpinnerCustomAdapter customAdapter=new SpinnerCustomAdapter(getApplicationContext(),flags,countryNames);
+        spin.setAdapter(customAdapter);
+    }
+
+    public void showToastOfText(View view) {
+        boolean on = ((ToggleButton) view).isChecked();
+
+        if (on) {
+           Toast.makeText(this, "Button is On and text is :"+((ToggleButton) view).getText().toString(),Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Button is Off and text is :"+((ToggleButton) view).getText().toString(),Toast.LENGTH_LONG).show();
+        }
     }
 }

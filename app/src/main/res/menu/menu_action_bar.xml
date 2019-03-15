@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_share"
+        android:title="Share"></item>
+    <group
+        android:id="@+id/action_bar"
+        android:menuCategory="container"
+        android:orderInCategory="5">
+        <item
+            android:id="@+id/mi_item1"
+            android:menuCategory="container"
+            android:orderInCategory="3"
+            android:title="MI Item 1"
+            app:showAsAction="always"></item>
+        <item
+            android:id="@+id/mi_item2"
+            android:menuCategory="alternative"
+            android:orderInCategory="0"
+            android:title="MI Item 2"
+            app:showAsAction="collapseActionView"></item>
+        <item
+            android:id="@+id/mi_item3"
+            android:menuCategory="alternative"
+            android:orderInCategory="1"
+            android:title="MI Item 3"
+            app:showAsAction="withText"></item>
+    </group>
+</menu>

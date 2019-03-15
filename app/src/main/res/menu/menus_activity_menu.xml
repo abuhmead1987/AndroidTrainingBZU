@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/menu_add"
+        android:title="Add Item"
+        app:showAsAction="always"></item>
+    <item
+        android:icon="@drawable/menu_file"
+        android:title="File"
+        app:showAsAction="always">
+        <menu>
+            <item android:title="Group One">
+                <menu>
+                    <item
+                        android:id="@+id/menu_new"
+                        android:title="New"></item>
+                    <item
+                        android:id="@+id/menu_open"
+                        android:title="Open"></item>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_settings"
+                android:title="Settings"></item>
+            <item
+                android:id="@+id/menu_save"
+                android:icon="@drawable/menu_file"
+                android:title="Save"
+                ></item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/menu_share"
+        android:title="Share date with your friends to have fun"
+        android:titleCondensed="Share"
+        app:showAsAction="ifRoom"
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_whatsapp"
+                android:title="Whatsapp"></item>
+            <item
+                android:id="@+id/menu_facebook"
+                android:title="Facebook"></item>
+        </menu>
+    </item>
+</menu>

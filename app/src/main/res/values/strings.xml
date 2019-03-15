@@ -36,4 +36,14 @@ Create an Android project
 
     </string>
     <string name="map_url"><![CDATA[https://www.openstreetmap.org/directions?engine=graphhopper_car&route=31.9297%2C35.2083%3B31.9198%2C35.2160#map=15/31.9250/35.2110]]></string>
+    <string name="date">Date :</string>
+    <string name="time_picker">Time Picker</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="share_text_with">Share text with ...</string>
 </resources>

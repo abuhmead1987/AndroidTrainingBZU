@@ -2,9 +2,8 @@ package com.examples.android.androidtrainingbzu;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -12,8 +11,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.InputStream;
 
 public class WebviewActivity extends AppCompatActivity {
     WebView webView;

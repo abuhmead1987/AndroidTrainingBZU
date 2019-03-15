@@ -19,19 +19,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this,LongTextActivity.class));
                 break;
             case R.id.btn_startLifecycleActivity:
-                startActivity(new Intent(this,ActivityLifcycle.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                startActivity(new Intent(this,ActivityLifcycle.class));
                 break;
             case R.id.btn_startActivityResul:
-                startActivity(new Intent(this,ForResultsActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                startActivity(new Intent(this,ForResultsActivity.class));
                 break;
             case R.id.btn_startimplicitActivity:
-                startActivity(new Intent(this,ImplicitActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                startActivity(new Intent(this,ImplicitActivity.class));
                 break;
             case R.id.btn_startView1Activity:
-                startActivity(new Intent(this,ViewsActivity_1.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                startActivity(new Intent(this,ViewsActivity_1.class));
                 break;
             case R.id.btn_startWebviewActivity:
-                startActivity(new Intent(this,WebviewActivity.class));//startActivity(new Intent(this,LifecycleOfActivity.class));
+                startActivity(new Intent(this,WebviewActivity.class));
+                break;
+            case R.id.btn_startDialogsActivity:
+                startActivity(new Intent(this,DialogsActivity.class));
+                break;
+            case R.id.btn_startScaleGestureDetectorActivity:
+                startActivity(new Intent(this,ScaleGestureDetectorActivity.class));
+                break;
+            case R.id.btn_startMotionEventActivity:
+                startActivity(new Intent(this,MotionEventActivity.class));
+                break;
+            case R.id.btn_startMenuActivity:
+                startActivity(new Intent(this,MenusActivity.class));
                 break;
 
         }

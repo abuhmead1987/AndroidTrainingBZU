@@ -37,4 +37,13 @@
         android:text="Pick Date"
         android:gravity="center"
         android:onClick="pickDate"/>
+    <Button
+        android:id="@+id/btn_showSnackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Snackbar"
+        android:gravity="center"
+        android:onClick="showSnackbar"
+        android:background="@drawable/btn_bg2_9"/>
+
 </LinearLayout>

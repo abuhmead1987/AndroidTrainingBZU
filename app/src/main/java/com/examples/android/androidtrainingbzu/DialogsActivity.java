@@ -3,13 +3,17 @@ package com.examples.android.androidtrainingbzu;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.examples.android.androidtrainingbzu.Fragments.TimePickerFragment;
 
@@ -80,5 +84,21 @@ public class DialogsActivity extends AppCompatActivity {
         // Assign the concatenated strings to timeMessage.
         String timeMessage = (hour_string + ":" + minute_string);
         ((TextView)findViewById(R.id.txt_time)).setText("Time : "+timeMessage);
+    }
+    Snackbar snackbar=null;
+    public void showSnackbar(View view){
+        snackbar = Snackbar
+                .make(view, "This is a Snackbar, show Toast?", Snackbar.LENGTH_LONG)
+                .setAction("Yes", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getApplicationContext(), "Snackbar action button clicked",Toast.LENGTH_LONG).show();
+                    }
+                });
+        snackbar.setActionTextColor(Color.RED);  //getResources().getColor(R.color.green));
+        View sbView = snackbar.getView();
+        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+        textView.setTextColor(Color.YELLOW);
+        snackbar.show();
     }
 }

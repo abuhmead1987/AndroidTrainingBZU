@@ -19,7 +19,7 @@
     </item>
 
     <!--pressed state. -->
-    <item android:state_pressed="true">
+    <item android:state_pressed="true" >
         <shape android:shape="rectangle">
             <gradient android:startColor="#00574a" android:angle="270"
                 android:endColor="#008577"></gradient>

@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startMenuActivity:
                 startActivity(new Intent(this,MenusActivity.class));
                 break;
+            case R.id.btn_startTabsActivity:
+                startActivity(new Intent(this,TabsActivity.class));
+                break;
 
         }
     }

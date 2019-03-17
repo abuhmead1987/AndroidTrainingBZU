@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoadImagesAsyncAndLoaderActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Image From Web using AsyncTask"
+        android:onClick="loadImageFromWeb"/>
+
+    <TextView
+        android:id="@+id/txtvu_progessresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_frominternet"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:src="@drawable/image_placeholder"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Image From Web using AsyncTaskLoader"
+        android:onClick="loadFromLoader"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reload Image From Web using AsyncTaskLoader"
+        android:onClick="reLoadFromLoader"/>
+
+    <TextView
+        android:id="@+id/txtvu_loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/img_load"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/image_placeholder" />
+</LinearLayout>

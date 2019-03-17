@@ -65,4 +65,5 @@ Create an Android project
     <string name="emp_id">Emp ID</string>
     <string name="title_employee_list">Employees</string>
     <string name="title_employee_detail">Employee Detail</string>
+    <string name="Url">https://www.android.com/static/2016/img/hero-carousel/banner-android-p-2.jpg</string>
 </resources>

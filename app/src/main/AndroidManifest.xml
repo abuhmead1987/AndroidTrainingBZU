@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.examples.android.androidtrainingbzu">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,11 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/StyledActivity">
-        <activity android:name=".EmployeeListActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".LoadImagesAsyncAndLoaderActivity"></activity>
+        <activity
+            android:name=".EmployeeListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HR_MainActivity" />
-        <activity android:name=".EmployeeDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".EmployeeDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TabsActivity"
             android:label="@string/title_activity_tabs"

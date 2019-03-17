@@ -1,5 +1,13 @@
 package com.examples.android.androidtrainingbzu.Utils;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Environment;
+
+import java.io.File;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -30,6 +38,25 @@ public class Utils {
     }
     public static String getDateFormatedString(Date stringDate){
         return getDateFormatedString(stringDate,mPattern);
+    }
+
+    public static boolean isDeviceConnectedInternet(Context context){
+        ConnectivityManager connMgr = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isConnected();
+    }
+    public static Bitmap getImageFromBath(String path){
+        File imgFile = new  File(path);
+        if(imgFile.exists()){
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+            return myBitmap;
+        }else
+            return null;
+    }
+    public  static boolean isSDCardPresent() {
+        return Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED);
     }
 
 }

@@ -52,4 +52,17 @@ Create an Android project
     <string name="tab_text_3">Tab 3</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_tabs">TabsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="hiring_date">Hiring Date</string>
+    <string name="emp_id">Emp ID</string>
+    <string name="title_employee_list">Employees</string>
+    <string name="title_employee_detail">Employee Detail</string>
 </resources>

@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startTabsActivity:
                 startActivity(new Intent(this,TabsActivity.class));
                 break;
+            case R.id.btn_startRecyclerViewActivity:
+                startActivity(new Intent(this,HR_MainActivity.class));
+                break;
 
         }
     }

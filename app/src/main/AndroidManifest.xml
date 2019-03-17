@@ -13,6 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/StyledActivity">
+        <activity android:name=".EmployeeListActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".HR_MainActivity" />
+        <activity android:name=".EmployeeDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TabsActivity"
             android:label="@string/title_activity_tabs"

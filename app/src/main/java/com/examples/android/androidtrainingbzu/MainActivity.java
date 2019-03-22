@@ -51,8 +51,30 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_startLoadImagesActivity:
                 startActivity(new Intent(this,LoadImagesAsyncAndLoaderActivity.class));
                 break;
-
-
+            case R.id.btn_startChecFormkActivity:
+                startActivity(new Intent(this,FormCheckActivity.class));
+                break;
+            case R.id.btn_startCustomBrodcastActivity:
+                startActivity(new Intent(this,BroadcastActivity.class));
+                break;
+            case R.id.btn_startCustomDownloadManagerActivity:
+                startActivity(new Intent(this,CustomDownloadManagerActivity.class));
+                break;
+            case R.id.btn_downloadFileUsingService:
+                startActivity(new Intent(this,StartIntentServiceActivity.class));
+                break;
+            case R.id.btn_JobServiceActivity:
+                startActivity(new Intent(this,JobServiceActivity.class));
+                break;
+            case R.id.btn_openNotification:
+                startActivity(new Intent(this,StartNotificationActivity.class));
+                break;
+            case R.id.btn_AlarmActivity:
+                startActivity(new Intent(this,AlarmActivity.class));
+                break;
+            case R.id.btn_languageAndSharedPreferencesActivity:
+                startActivity(new Intent(this,LanguageAndSharedPreferencesActivity.class));
+                break;
         }
     }
 }

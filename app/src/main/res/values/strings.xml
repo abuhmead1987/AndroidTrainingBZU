@@ -66,4 +66,142 @@ Create an Android project
     <string name="title_employee_list">Employees</string>
     <string name="title_employee_detail">Employee Detail</string>
     <string name="Url">https://www.android.com/static/2016/img/hero-carousel/banner-android-p-2.jpg</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="hint_gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="btn_sign_up">Sign Up!!</string>
+    <string name="err_msg_name">Please enter a Name</string>
+    <string name="err_msg_required">Valid Input Required</string>
+    <string name="err_msg_email">Please enter a Valid Email</string>
+    <string name="err_msg_password">Enter a Password</string>
+    <string name="err_msg_dob">Enter a valid D.O.B</string>
+
+    <string name="power_connected">Power connected!</string>
+    <string name="power_disconnected">Power disconnected!</string>
+    <string name="custom_broadcast_toast">Custom Broadcast Received</string>
+    <string name="send_custom_broadcast">Send Custom Broadcast</string>
+    <string name="receiver_on">Receiver On</string>
+    <string name="receiver_off">Receiver Off</string>
+    <string name="unknown_action">unknown intent action</string>
+
+    <string name="notification_title">You\'ve been notified!</string>
+    <string name="notification_text">This is your notification text.</string>
+    <string name="update">Update Notification</string>
+    <string name="notify_me">Notify Me!</string>
+    <string name="update_me">Update Me!</string>
+    <string name="cancel_me">Cancel Me!</string>
+    <string name="notification_updated">Notification Updated!</string>
+    <string name="notification_channel_name">Mascot Notification</string>
+    <string name="notification_channel_description">Notification from Mascot</string>
+    <string name="alarm_off">Alarm off</string>
+    <string name="alarm_on">Alarm on</string>
+    <string name="custom_notification_title_template">Custom: %1$s</string>
+    <string name="alarm_on_toast">Stand Up Alarm On!</string>
+    <string name="alarm_off_toast">Stand Up Alarm Off!</string>
+    <string name="seconds">%1$d s</string>
+    <string name="required_network_type">Network Type Required:</string>
+    <string name="none">None</string>
+    <string name="any">Any</string>
+    <string name="wifi">Wifi</string>
+    <string name="requires">Requires:</string>
+    <string name="device_idle">Device Idle</string>
+    <string name="device_charging">Device Charging</string>
+    <string name="override_deadline">Override Deadline:</string>
+    <string name="not_set">Not set</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="cancel_jobs">Cancel Jobs</string>
+    <string name="job_service">Job Service</string>
+    <string name="job_running">Your Job ran to completion!</string>
+    <string name="job_service_notification">Job Service notification</string>
+    <string name="notification_channel_job">Notifications from Job Service</string>
+    <string name="job_scheduled">Job Scheduled, will run when the constraints are met</string>
+    <string name="no_constraint_toast">Please set at least one constraint</string>
+    <string name="jobs_canceled">Jobs Canceled</string>
+    <!-- TODO: remove this placeholder text -->
+    <string name="custom_notification_placeholder_text_template">You said %1$s and lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel semper
+        venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis. Pellentesque
+        vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper ornare lacus. Duis
+        ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis viverra rhoncus sit amet
+        nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec tortor.
+    </string>
+    <string name="title_activity_job_service">JobServiceActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="action_reply">Reply</string>
+    <string name="action_share">Share</string>
+    <string name="translated_text">This text will be translated if you changed the language</string>
 </resources>

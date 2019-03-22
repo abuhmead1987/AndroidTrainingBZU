@@ -30,7 +30,6 @@ public class ImplicitActivity extends AppCompatActivity {
         edt_mobile=findViewById(R.id.edt_phone);
         edt_url=findViewById(R.id.edt_url);
         edt_email.requestFocus();
-
     }
 
     public void callImplicitIntent(View view) {

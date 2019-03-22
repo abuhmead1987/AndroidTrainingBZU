@@ -135,6 +135,78 @@
             android:background="@drawable/rounded_butoon"
             android:textColor="#FFFFFF"
             android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startChecFormkActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Form Check Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startCustomBrodcastActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Custom Broadcast Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_startCustomDownloadManagerActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Custom Download Manager Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_downloadFileUsingService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Download File Using Service Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_openNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Notification Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_JobServiceActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Job Service Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_AlarmActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Alarm Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_languageAndSharedPreferencesActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Language Shared Preferences Activity"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </ScrollView>

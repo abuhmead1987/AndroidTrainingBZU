@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +16,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/StyledActivity">
-        <activity android:name=".LoadImagesAsyncAndLoaderActivity"></activity>
+
+
+        <activity android:name=".LanguageAndSharedPreferencesActivity" />
+        <activity android:name=".StartNotificationActivity" />
+        <activity android:name=".CustomDownloadManagerActivity" />
+        <activity android:name=".BroadcastActivity" />
+        <activity android:name=".StartIntentServiceActivity" />
+        <activity android:name=".JobServiceActivity" />
+
+        <service
+            android:name=".Services.NotificationJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".Services.DownloadService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".Brodcasts.DownloadFileFinishedReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.ACCESS_NETWORK_STATE" />
+
+        <activity android:name=".AlarmActivity" />
+
+        <receiver
+            android:name=".Brodcasts.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Brodcasts.CustomReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".FormCheckActivity" />
+        <activity android:name=".LoadImagesAsyncAndLoaderActivity" />
         <activity
             android:name=".EmployeeListActivity"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -1,12 +1,12 @@
 package com.examples.android.androidtrainingbzu;
 
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.examples.android.androidtrainingbzu.Utils.DownloadFileAsyncTask;
 import com.examples.android.androidtrainingbzu.Utils.TaskLoader;
 import com.examples.android.androidtrainingbzu.Utils.Utils;
+
 
 public class LoadImagesAsyncAndLoaderActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Bitmap> {
@@ -26,12 +27,14 @@ public class LoadImagesAsyncAndLoaderActivity extends AppCompatActivity implemen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load_images_async_and_loader);
         txtvu_loader = findViewById(R.id.txtvu_loader);
+
     }
 
     public void loadImageFromWeb(View view) {
         DownloadFileAsyncTask downloadFileAsyncTask = new DownloadFileAsyncTask((ImageView) findViewById(R.id.img_frominternet),
-                (TextView) findViewById(R.id.txtvu_progessresult),(ProgressBar)findViewById(R.id.progressBar));
+                (TextView) findViewById(R.id.txtvu_progessresult), (ProgressBar) findViewById(R.id.progressBar));
         downloadFileAsyncTask.execute("https://www.android.com/static/2016/img/hero-carousel/banner-android-p-2.jpg");
+
     }
 
     public void loadFromLoader(View view) {
@@ -83,6 +86,4 @@ public class LoadImagesAsyncAndLoaderActivity extends AppCompatActivity implemen
     public void onLoaderReset(@NonNull Loader<Bitmap> loader) {
         txtvu_loader.setText("The loader : " + loader.getId() + ", rest called");
     }
-
-
 }

@@ -11,33 +11,43 @@
         android:id="@+id/notify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/notify_me" />
+        android:text="@string/notify_me"
+        android:background="@drawable/rounded_butoon"
+        android:textColor="#fff"/>
 
     <Button
         android:id="@+id/update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/update_me" />
+        android:text="@string/update_me"
+        android:background="@drawable/rounded_butoon"
+        android:textColor="#fff"/>
 
     <Button
         android:id="@+id/cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cancel_me" />
+        android:text="@string/cancel_me"
+        android:background="@drawable/rounded_butoon"
+        android:textColor="#fff"/>
 
     <Button
         android:id="@+id/button11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="showSimpleNotification"
-        android:text="Show Simple Notification" />
+        android:text="Show Simple Notification"
+        android:background="@drawable/rounded_butoon"
+        android:textColor="#fff"/>
 
     <Button
         android:id="@+id/button12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="showBigPictureNotification"
-        android:text="Show Big Picture Notification" />
+        android:text="Show Big Picture Notification"
+        android:background="@drawable/rounded_butoon"
+        android:textColor="#fff"/>
 
 
 </LinearLayout>

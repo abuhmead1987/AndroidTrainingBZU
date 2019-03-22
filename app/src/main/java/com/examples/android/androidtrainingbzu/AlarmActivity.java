@@ -1,5 +1,6 @@
 package com.examples.android.androidtrainingbzu;
 
+import android.Manifest;
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -14,6 +15,7 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.examples.android.androidtrainingbzu.Brodcasts.AlarmReceiver;
+import com.examples.android.androidtrainingbzu.Utils.Utils;
 
 public class AlarmActivity extends AppCompatActivity {
 
@@ -23,7 +25,8 @@ public class AlarmActivity extends AppCompatActivity {
     private static final String PRIMARY_CHANNEL_ID =
             "primary_notification_channel";
     private NotificationManager mNotificationManager;
-
+    AlarmManager alarmManager;
+    PendingIntent notifyPendingIntent;
     /**
      * Initializes the activity.
      *
@@ -46,11 +49,11 @@ public class AlarmActivity extends AppCompatActivity {
                 notifyIntent, PendingIntent.FLAG_NO_CREATE) != null);
         alarmToggle.setChecked(alarmUp);
 
-        final PendingIntent notifyPendingIntent = PendingIntent.getBroadcast
+        notifyPendingIntent = PendingIntent.getBroadcast
                 (this, NOTIFICATION_ID, notifyIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final AlarmManager alarmManager = (AlarmManager) getSystemService
+        alarmManager = (AlarmManager) getSystemService
                 (ALARM_SERVICE);
 
         // Set the click listener for the toggle button.
@@ -98,6 +101,7 @@ public class AlarmActivity extends AppCompatActivity {
 
         // Create the notification channel.
         createNotificationChannel();
+
     }
 
 

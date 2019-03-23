@@ -8,9 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.examples.android.androidtrainingbzu.Database.FirebaseDB_Helper;
+import com.examples.android.androidtrainingbzu.Database.SQLiteDB_Helper;
 import com.examples.android.androidtrainingbzu.Models.Employee;
 import com.examples.android.androidtrainingbzu.Utils.DataSource;
 import com.examples.android.androidtrainingbzu.Utils.Utils;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,15 +29,19 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.LinkedList;
 
-public class HR_MainActivity extends AppCompatActivity{
+public class HR_MainActivity extends AppCompatActivity {
     public static LinkedList<Employee> employeeLinkedList = new LinkedList();
-    private final String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = HR_MainActivity.class.getSimpleName();
+    FirebaseDB_Helper firebaseDB_helper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hr__main);
+        firebaseDB_helper = FirebaseDB_Helper.getInstance(this);
     }
 
     public void startActivity() {
@@ -40,31 +50,21 @@ public class HR_MainActivity extends AppCompatActivity{
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
+
     public void callInitialize(View view) {
         switch (view.getId()) {
             case R.id.btn_inialize:
-                new AsyncInitializerTask().execute(DataSource.INITIALIZE);
-//                employeeLinkedList.clear();
-//                Employee e;
-//                int empID = 1;
-//                String[] depts = {"Accounting", "HR", "IT"};
-//                int[] avatars = {R.drawable.emp_pic1, R.drawable.emp_pic2, R.drawable.emp_pic3, R.drawable.emp_pic4, R.drawable.emp_pic5, R.drawable.emp_pic6, R.drawable.emp_pic7};
-//                for (int i = 0; i < 20; i++) {
-//                    e = new Employee("Emplyee " + empID + " Name ", "Emplyee " + empID + " Email ", "Emplyee " + empID + " Phone ",
-//                            "Emplyee " + empID + " Address ", depts[i % 3], empID++, avatars[i % 7], Utils.getDateFromString("22.05.2016"));
-//                    employeeLinkedList.addLast(e);
-//                }
-//                startActivity();
+                new AsyncInitializerTask().execute(DataSource.INITIALIZE);//
                 break;
-//            case R.id.btn_loadFromFirebase:
-//                new AsyncInitializerTask().execute(DataSource.FIREBASE);
-//                break;
-//            case R.id.btn_LoadFromSQLite:
-//                new AsyncInitializerTask().execute(DataSource.SQLIT_DB);
-//                break;
-//            case R.id.btn_LoadFromWebAPI:
-//                new AsyncInitializerTask().execute(DataSource.WEB_API);
-//                break;
+            case R.id.btn_loadFromFirebase:
+                new AsyncInitializerTask().execute(DataSource.FIREBASE);
+                break;
+            case R.id.btn_LoadFromSQLite:
+                new AsyncInitializerTask().execute(DataSource.SQLIT_DB);
+                break;
+            case R.id.btn_LoadFromWebAPI:
+                new AsyncInitializerTask().execute(DataSource.WEB_API);
+                break;
         }
     }
 
@@ -100,60 +100,66 @@ public class HR_MainActivity extends AppCompatActivity{
                         employeeLinkedList.addLast(e);
                     }
                     break;
-//                case DataSource.FIREBASE:
-//                    firebaseDB_helper.getEmpRef().addListenerForSingleValueEvent(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(DataSnapshot dataSnapshot) {
-//                            if (dataSnapshot.hasChildren()) {
-//                                employeeLinkedList.clear();
-//                                Employee e;
-//                                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-//                                    //Utils.getDateFromString("22.05.2016")
-//                                    e = new Employee(ds.child("name").getValue(String.class)
-//                                            , ds.child("email").getValue(String.class),
-//                                            ds.child("phone").getValue(String.class),
-//                                            ds.child("address").getValue(String.class),
-//                                            ds.child("dept").getValue(String.class),
-//                                            ds.child("id").getValue(Integer.class),
-//                                            ds.child("picResID").getValue(Integer.class),
-//                                            ds.child("hireDate").getValue(Date.class)
-//                                    );
-//                                    employeeLinkedList.addLast(e);
-//                                }
-//                                Intent intent = new Intent(MainActivity.this, EmployeeListActivity.class);
-//                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                                startActivity(intent);
-//                            } else {
-//                                fillEmpList(DataSource.INITIALIZE);
-//                                fillEmpList(DataSource.FIREBASE);
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(DatabaseError databaseError) {
-//                            // ...
-//                        }
-//                    });
-//                    break;
-//                case DataSource.SQLIT_DB:
-//                    SQLiteDB_Helper ss = SQLiteDB_Helper.getInstance(MainActivity.this);
-//                    if (ss.getEmployeesCount() > 0) {
-//                        employeeLinkedList.clear();
-//                        employeeLinkedList = ss.getEmployees();
-//                    } else {
-//                        fillEmpList(DataSource.INITIALIZE);
-//                        //ss.insertEmployees(employeeLinkedList);
+                case DataSource.FIREBASE:
+                    firebaseDB_helper.getEmpRef().addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.hasChildren()) {
+                                employeeLinkedList.clear();
+                                Employee e;
+                                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                                    //Utils.getDateFromString("22.05.2016")
+                                    e = new Employee(ds.child("name").getValue(String.class)
+                                            , ds.child("email").getValue(String.class),
+                                            ds.child("phone").getValue(String.class),
+                                            ds.child("address").getValue(String.class),
+                                            ds.child("dept").getValue(String.class),
+                                            ds.child("id").getValue(Integer.class),
+                                            ds.child("picResID").getValue(Integer.class),
+                                            ds.child("hireDate").getValue(Date.class)
+                                    );
+                                    employeeLinkedList.addLast(e);
+                                }
+                                Intent intent = new Intent(HR_MainActivity.this, EmployeeListActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            } else if (employeeLinkedList.size() > 0) {
+                                DatabaseReference empRef = firebaseDB_helper.getEmpRef();
+                                for (Employee e :employeeLinkedList) {
+                                    empRef.push().setValue(e);
+                                }
+                                fillEmpList(DataSource.FIREBASE);
+                            } else {
+                                fillEmpList(DataSource.INITIALIZE);
+                                fillEmpList(DataSource.FIREBASE);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            // ...
+                        }
+                    });
+                    break;
+                case DataSource.SQLIT_DB:
+                    SQLiteDB_Helper ss = SQLiteDB_Helper.getInstance(HR_MainActivity.this);
+                    if (ss.getEmployeesCount() > 0) {
+                        employeeLinkedList.clear();
+                        employeeLinkedList = ss.getEmployees();
+                    } else {
+                        fillEmpList(DataSource.INITIALIZE);
+                        ss.insertEmployees(employeeLinkedList);
 //                        for (Employee ee : employeeLinkedList) {
 //                            ss.insertEmployee(ee);
 //                        }
-//                        fillEmpList(DataSource.SQLIT_DB);
-//                    }
-//                    break;
-//                case DataSource.WEB_API:
-//                    new JsonTask(MainActivity.this).execute("http://192.168.137.1:8070/APIs/EmpAPIService.svc/getEmployees");
-//
-//                    break;
+                        fillEmpList(DataSource.SQLIT_DB);
+                    }
+                    break;
+                case DataSource.WEB_API:
+                    new JsonTask(HR_MainActivity.this).execute("http://192.168.137.1:8070/APIs/EmpAPIService.svc/getEmployees");
+
+                    break;
             }
 
         }
@@ -161,7 +167,6 @@ public class HR_MainActivity extends AppCompatActivity{
     }
 
     public class JsonTask extends AsyncTask<String, String, String> {
-
         private Context context;
 
         public JsonTask(Context context) {
@@ -173,8 +178,6 @@ public class HR_MainActivity extends AppCompatActivity{
         }
 
         protected String doInBackground(String... params) {
-
-
             HttpURLConnection connection = null;
             BufferedReader reader = null;
 
@@ -182,22 +185,14 @@ public class HR_MainActivity extends AppCompatActivity{
                 URL url = new URL(params[0]);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.connect();
-
-
                 InputStream stream = connection.getInputStream();
-
                 reader = new BufferedReader(new InputStreamReader(stream));
-
                 StringBuffer buffer = new StringBuffer();
                 String line = "";
-
                 while ((line = reader.readLine()) != null) {
                     buffer.append(line + "\n");
                 }
-
                 return buffer.toString();
-
-
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {

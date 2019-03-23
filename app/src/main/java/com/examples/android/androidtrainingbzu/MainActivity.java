@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_languageAndSharedPreferencesActivity:
                 startActivity(new Intent(this,LanguageAndSharedPreferencesActivity.class));
                 break;
+            case R.id.btn_startRecyclerViewActivity:
+                startActivity(new Intent(this,HR_MainActivity.class));
+                break;
         }
     }
 }

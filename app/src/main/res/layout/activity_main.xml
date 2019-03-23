@@ -117,15 +117,7 @@
             android:background="@drawable/rounded_butoon"
             android:textColor="#FFFFFF"
             android:textAllCaps="false"/>
-        <Button
-            android:id="@+id/btn_startRecyclerViewActivity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start RecyclerView Activity"
-            android:onClick="startNewActivity"
-            android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+
         <Button
             android:id="@+id/btn_startLoadImagesActivity"
             android:layout_width="match_parent"
@@ -207,6 +199,14 @@
             android:background="@drawable/rounded_butoon"
             android:textColor="#FFFFFF"
             android:textAllCaps="false"/>
-
+        <Button
+            android:id="@+id/btn_startRecyclerViewActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start RecyclerView Different sources Activity Activity - HR"
+            android:onClick="startNewActivity"
+            android:background="@drawable/rounded_butoon"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>

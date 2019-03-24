@@ -63,8 +63,8 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.EmpI
     }
 
 
-    public class EmpInfoViewHolder extends RecyclerView.ViewHolder
-            implements View.OnClickListener, View.OnLongClickListener{
+    public class EmpInfoViewHolder extends RecyclerView.ViewHolder{
+//            implements View.OnClickListener, View.OnLongClickListener{
         public  final TextView txtvu_name, txtvu_address, txtvu_phone, txtvu_email, txtvu_id, txtvu_hiredate;
         final ImageView  img_avatar;
         final EmployeesAdapter mAdapter;
@@ -78,43 +78,43 @@ public class EmployeesAdapter extends RecyclerView.Adapter<EmployeesAdapter.EmpI
             txtvu_id = (TextView) itemView.findViewById(R.id.txtvu_id);
             txtvu_hiredate = (TextView) itemView.findViewById(R.id.txtvu_hiredate);
             img_avatar = (ImageView) itemView.findViewById(R.id.img_pic);
-            itemView.setOnClickListener(this);
-            itemView.setOnLongClickListener(this);
+//            itemView.setOnClickListener(this);
+//            itemView.setOnLongClickListener(this);
         }
 
-        /**
-         * Called when a view has been clicked.
-         *
-         * @param v The view that was clicked.
-         */
-        @Override
-        public void onClick(View v) {
-            int mPosition = getLayoutPosition();
-            if (mTwoPane) {
-                Bundle arguments = new Bundle();
-                arguments.putInt(EmployeeDetailFragment.ARG_ITEM_ID,mPosition);
-                EmployeeDetailFragment fragment = new EmployeeDetailFragment();
-                fragment.setArguments(arguments);
-                mParentActivity.getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.employee_detail_container, fragment)
-                        .commit();
-            } else {
-                Context context = v.getContext();
-                Intent intent = new Intent(context, EmployeeDetailActivity.class);
-                intent.putExtra(EmployeeDetailFragment.ARG_ITEM_ID, mPosition);
-                context.startActivity(intent);
-            }
-        }
+//        /**
+//         * Called when a view has been clicked.
+//         *
+//         * @param v The view that was clicked.
+//         */
+//        @Override
+//        public void onClick(View v) {
+//            int mPosition = getLayoutPosition();
+//            if (mTwoPane) {
+//                Bundle arguments = new Bundle();
+//                arguments.putInt(EmployeeDetailFragment.ARG_ITEM_ID,mPosition);
+//                EmployeeDetailFragment fragment = new EmployeeDetailFragment();
+//                fragment.setArguments(arguments);
+//                mParentActivity.getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.employee_detail_container, fragment)
+//                        .commit();
+//            } else {
+//                Context context = v.getContext();
+//                Intent intent = new Intent(context, EmployeeDetailActivity.class);
+//                intent.putExtra(EmployeeDetailFragment.ARG_ITEM_ID, mPosition);
+//                context.startActivity(intent);
+//            }
+//        }
 
-        /**
-         * Called when a view has been clicked and held.
-         *
-         * @param v The view that was clicked and held.
-         * @return true if the callback consumed the long click, false otherwise.
-         */
-        @Override
-        public boolean onLongClick(View v) {
-            return false;
-        }
+//        /**
+//         * Called when a view has been clicked and held.
+//         *
+//         * @param v The view that was clicked and held.
+//         * @return true if the callback consumed the long click, false otherwise.
+//         */
+//        @Override
+//        public boolean onLongClick(View v) {
+//            return false;
+//        }
     }
 }

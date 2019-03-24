@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "248426195071",
+    "firebase_url": "https://androidtrainingbzu.firebaseio.com",
+    "project_id": "androidtrainingbzu",
+    "storage_bucket": "androidtrainingbzu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248426195071:android:cba56278792b591a",
+        "android_client_info": {
+          "package_name": "com.examples.android.androidtrainingbzu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248426195071-pecsu1bjh1kc1je2h4i113god5ll20pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.examples.android.androidtrainingbzu",
+            "certificate_hash": "edbf792e077e26ae5929718013dd0688a1cdb006"
+          }
+        },
+        {
+          "client_id": "248426195071-e9e2f141etm62bh91dhr073rfuk1mnp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtpmUQkDg8XapBLXF2-9y_UyfWqMjvJwg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248426195071-e9e2f141etm62bh91dhr073rfuk1mnp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

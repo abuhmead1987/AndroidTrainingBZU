@@ -57,9 +57,9 @@ public class EmployeeListActivity extends AppCompatActivity {
             mTwoPane = true;
         }
 
-        View recyclerView = findViewById(R.id.employee_list);
+        RecyclerView recyclerView = findViewById(R.id.employee_list);
         if (recyclerView != null)
-            setupRecyclerView((RecyclerView) recyclerView);
+            setupRecyclerView(recyclerView);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

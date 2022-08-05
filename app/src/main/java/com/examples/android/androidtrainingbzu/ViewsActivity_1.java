@@ -1,6 +1,6 @@
 package com.examples.android.androidtrainingbzu;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,8 +11,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.examples.android.androidtrainingbzu.Adapters.SpinnerCustomAdapter;
-
-import org.w3c.dom.Text;
 
 public class ViewsActivity_1 extends AppCompatActivity {
 

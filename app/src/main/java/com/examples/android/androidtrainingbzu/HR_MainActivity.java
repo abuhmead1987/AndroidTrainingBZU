@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
@@ -101,7 +101,8 @@ public class HR_MainActivity extends AppCompatActivity {
                     }
                     break;
                 case DataSource.FIREBASE:
-                    firebaseDB_helper.getEmpRef().addListenerForSingleValueEvent(new ValueEventListener() {
+                    firebaseDB_helper.getEmpRef()
+                            .addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             if (dataSnapshot.hasChildren()) {
@@ -127,7 +128,7 @@ public class HR_MainActivity extends AppCompatActivity {
                             } else if (employeeLinkedList.size() > 0) {
                                 DatabaseReference empRef = firebaseDB_helper.getEmpRef();
                                 for (Employee e :employeeLinkedList) {
-                                    empRef.push().setValue(e);
+                                    empRef.child("Emp_"+e.getID()).setValue(e);
                                 }
                                 fillEmpList(DataSource.FIREBASE);
                             } else {
@@ -157,7 +158,7 @@ public class HR_MainActivity extends AppCompatActivity {
                     }
                     break;
                 case DataSource.WEB_API:
-                    new JsonTask(HR_MainActivity.this).execute("http://192.168.137.1:8070/APIs/EmpAPIService.svc/getEmployees");
+                    new JsonTask(HR_MainActivity.this).execute("http://172.19.16.180:8070/APIs/EmpAPIService.svc/getEmployees");
 
                     break;
             }

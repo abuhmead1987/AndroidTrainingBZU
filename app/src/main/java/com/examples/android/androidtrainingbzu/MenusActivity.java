@@ -2,14 +2,14 @@ package com.examples.android.androidtrainingbzu;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ShareCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.app.ShareCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -178,7 +178,7 @@ public class MenusActivity extends AppCompatActivity implements NavigationView.O
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_whatisthis:
-                android.support.v7.app.AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                androidx.appcompat.app.AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setTitle("What is this");
                 alertDialog.setMessage("This is a context menu :)");
                 alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {

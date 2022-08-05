@@ -1,6 +1,5 @@
 package com.examples.android.androidtrainingbzu;
 
-import android.Manifest;
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -8,14 +7,13 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.examples.android.androidtrainingbzu.Brodcasts.AlarmReceiver;
-import com.examples.android.androidtrainingbzu.Utils.Utils;
 
 public class AlarmActivity extends AppCompatActivity {
 

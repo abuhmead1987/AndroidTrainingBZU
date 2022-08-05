@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.provider.Settings;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 
 import com.examples.android.androidtrainingbzu.StartNotificationActivity;
 

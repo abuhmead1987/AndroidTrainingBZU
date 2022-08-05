@@ -18,7 +18,7 @@
 
     -->
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/employee_list"
         android:name="com.examples.android.employeeproject.EmployeeListFragment"
         android:layout_width="@dimen/item_width"

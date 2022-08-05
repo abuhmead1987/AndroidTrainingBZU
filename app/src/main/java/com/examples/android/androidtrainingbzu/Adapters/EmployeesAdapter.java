@@ -1,10 +1,7 @@
 package com.examples.android.androidtrainingbzu.Adapters;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.examples.android.androidtrainingbzu.EmployeeDetailActivity;
-import com.examples.android.androidtrainingbzu.EmployeeDetailFragment;
 import com.examples.android.androidtrainingbzu.EmployeeListActivity;
 import com.examples.android.androidtrainingbzu.Models.Employee;
 import com.examples.android.androidtrainingbzu.R;

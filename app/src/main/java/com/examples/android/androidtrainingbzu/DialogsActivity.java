@@ -5,15 +5,14 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.fragment.app.DialogFragment;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import com.examples.android.androidtrainingbzu.Fragments.TimePickerFragment;
 
@@ -97,7 +96,7 @@ public class DialogsActivity extends AppCompatActivity {
                 });
         snackbar.setActionTextColor(Color.RED);  //getResources().getColor(R.color.green));
         View sbView = snackbar.getView();
-        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = (TextView) sbView.findViewById(com.google.android.material.R.id.snackbar_text);
         textView.setTextColor(Color.YELLOW);
         snackbar.show();
     }

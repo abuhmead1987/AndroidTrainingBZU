@@ -15,7 +15,7 @@ import java.util.*
 
 class EmployeesAdapter(
     parent: EmployeeListActivity,
-    private val employeesList: LinkedList<Employee?>?, twoPane: Boolean,
+    private val employeesList: LinkedList<Employee>?, twoPane: Boolean,
 ) : RecyclerView.Adapter<EmpInfoViewHolder>() {
     private val mInflater: LayoutInflater
     private val mTwoPane: Boolean

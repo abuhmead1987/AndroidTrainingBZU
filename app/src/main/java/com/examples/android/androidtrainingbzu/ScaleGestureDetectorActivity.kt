@@ -24,7 +24,7 @@ class ScaleGestureDetectorActivity : AppCompatActivity() {
         detector = ScaleGestureDetector(this, ScaleListener())
         android_gesture_detector = Android_Gesture_Detector()
         // Create a GestureDetector
-        mGestureDetector = GestureDetector(this, android_gesture_detector)
+        mGestureDetector = GestureDetector(this, android_gesture_detector!!)
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {

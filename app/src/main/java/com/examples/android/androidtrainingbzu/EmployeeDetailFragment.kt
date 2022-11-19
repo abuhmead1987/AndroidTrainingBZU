@@ -1,6 +1,5 @@
 package com.examples.android.androidtrainingbzu
 
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
@@ -39,10 +38,10 @@ class EmployeeDetailFragment
         super.onCreate(savedInstanceState)
         if (requireArguments().containsKey(ARG_ITEM_ID)) {
             val empIndex = requireArguments().getInt(ARG_ITEM_ID)
-//            if (empIndex > -1) mItem = HR_MainActivity.Companion.employeeLinkedList!!.get(empIndex)
-            val activity: Activity? = this.activity
+            if (empIndex > -1) mItem = HR_MainActivity.Companion.employeeLinkedList!!.get(empIndex)
+           //this.activity
             val appBarLayout =
-                activity!!.findViewById<View>(R.id.toolbar_layout) as CollapsingToolbarLayout
+                requireActivity().findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)
             if (appBarLayout != null) {
                 if (empIndex > -1) appBarLayout.title = mItem?.name else appBarLayout.title =
                     "New Emp!"

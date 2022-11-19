@@ -94,7 +94,6 @@ class SQLiteDB_Helper private constructor(context: Context) :
             -1
         }
 
-    // employeesCursor.close();
     val employees: LinkedList<Employee>?
         @SuppressLint("Range")
         get() = try {
@@ -118,7 +117,7 @@ class SQLiteDB_Helper private constructor(context: Context) :
                             employeesCursor.getColumnIndex("hireDate"))))
                     employeesList.add(emp)
                 }
-                // employeesCursor.close();
+                employeesCursor.close();
                 employeesList
             } else {
                 null
@@ -128,7 +127,6 @@ class SQLiteDB_Helper private constructor(context: Context) :
             null
         }
 
-    @SuppressLint("Range")
     fun getEmployees(empID: String): LinkedList<Employee>? {
         return try {
             val employeesCursor =
@@ -137,15 +135,15 @@ class SQLiteDB_Helper private constructor(context: Context) :
             if (employeesCursor.count > 0) {
                 val employeesList = LinkedList<Employee>()
                 while (employeesCursor.moveToNext()) {
-                    employeesList.add(Employee(employeesCursor.getString(employeesCursor.getColumnIndex(
+                    employeesList.add(Employee(employeesCursor.getString(employeesCursor.getColumnIndexOrThrow(
                         "name")),
-                        employeesCursor.getString(employeesCursor.getColumnIndex("email")),
-                        employeesCursor.getString(employeesCursor.getColumnIndex("phone")),
-                        employeesCursor.getString(employeesCursor.getColumnIndex("address")),
-                        employeesCursor.getString(employeesCursor.getColumnIndex("dept")),
-                        employeesCursor.getInt(employeesCursor.getColumnIndex("ID")),
-                        employeesCursor.getInt(employeesCursor.getColumnIndex("picResID")),
-                        Utils.getDateFromString(employeesCursor.getString(employeesCursor.getColumnIndex(
+                        employeesCursor.getString(employeesCursor.getColumnIndexOrThrow("email")),
+                        employeesCursor.getString(employeesCursor.getColumnIndexOrThrow("phone")),
+                        employeesCursor.getString(employeesCursor.getColumnIndexOrThrow("address")),
+                        employeesCursor.getString(employeesCursor.getColumnIndexOrThrow("dept")),
+                        employeesCursor.getInt(employeesCursor.getColumnIndexOrThrow("ID")),
+                        employeesCursor.getInt(employeesCursor.getColumnIndexOrThrow("picResID")),
+                        Utils.getDateFromString(employeesCursor.getString(employeesCursor.getColumnIndexOrThrow(
                             "hireDate")))))
                 }
                 employeesList

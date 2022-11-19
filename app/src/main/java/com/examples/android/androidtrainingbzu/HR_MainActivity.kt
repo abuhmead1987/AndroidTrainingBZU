@@ -103,7 +103,7 @@ class HR_MainActivity : AppCompatActivity() {
             }
             DataSource.SQLIT_DB -> {
                 val sqlitedbHelper: SQLiteDB_Helper? =
-                    SQLiteDB_Helper.Companion.getInstance(this@HR_MainActivity)
+                    SQLiteDB_Helper.getInstance(this@HR_MainActivity)
 
                 if (sqlitedbHelper?.employeesCount!! > 0) {
                     employeeLinkedList!!.clear()
@@ -120,17 +120,7 @@ class HR_MainActivity : AppCompatActivity() {
                 var connection: HttpURLConnection? = null
                 var reader: BufferedReader? = null
                 try {
-                    val url = URL("http://192.168.43.36:8070/APIs/EmpAPIService.svc/getEmployees")
-//                    connection = url.openConnection() as HttpURLConnection
-//                    connection.connect()
-//                    val stream = connection.inputStream
-//                    reader = BufferedReader(InputStreamReader(stream))
-//                    val buffer = StringBuffer()
-//                    var line = ""
-//                    while (reader.readLine().also { line = it } != null) {
-//                        buffer.append("""$line""".trimIndent())
-//                    }
-
+                    val url = URL("http://192.168.137.1:8070/APIs/EmpAPIService.svc/getEmployees")
                     val jsonObject = JSONObject(url.readText())
                     val isSuccess = jsonObject.getString("status")
                     if (isSuccess == "Success") {
@@ -157,11 +147,6 @@ class HR_MainActivity : AppCompatActivity() {
                     e.printStackTrace()
                 } finally {
                     connection?.disconnect()
-//                    try {
-//                        reader!!.close()
-//                    } catch (e: IOException) {
-//                        e.printStackTrace()
-//                    }
                 }
             }
 

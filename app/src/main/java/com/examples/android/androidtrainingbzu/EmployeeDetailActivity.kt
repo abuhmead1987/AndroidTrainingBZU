@@ -26,7 +26,7 @@ class EmployeeDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_employee_detail)
         val toolbar = findViewById<View>(R.id.detail_toolbar) as Toolbar
         setSupportActionBar(toolbar)
-        val fab = findViewById<View>(R.id.fab) as FloatingActionButton
+        val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             if (fragment != null) {
                 val rootView = fragment!!.view
@@ -34,18 +34,18 @@ class EmployeeDetailActivity : AppCompatActivity() {
                 if (empListIndex == -1) {
                     emp = Employee()
                     emp.picResID = R.drawable.emp_pic7
-//                    HR_MainActivity.Companion.employeeLinkedList!!.add(emp)
+                    HR_MainActivity.Companion.employeeLinkedList!!.add(emp)
                 } else {
-//                    emp = HR_MainActivity.Companion.employeeLinkedList!!.get(empListIndex)!!
+                    emp = HR_MainActivity.Companion.employeeLinkedList!!.get(empListIndex)!!
                 }
                 emp.name =
-                    (rootView!!.findViewById<View>(R.id.edt_name) as EditText).text.toString()
+                    rootView!!.findViewById<EditText>(R.id.edt_name) .text.toString()
                 emp.email =
-                    (rootView.findViewById<View>(R.id.edt_email) as EditText).text.toString()
+                    rootView.findViewById<EditText>(R.id.edt_email) .text.toString()
                 emp.phone =
-                    (rootView.findViewById<View>(R.id.edt_phone) as EditText).text.toString()
+                    rootView.findViewById<EditText>(R.id.edt_phone) .text.toString()
                 emp.address =
-                    (rootView.findViewById<View>(R.id.edt_address) as EditText).text.toString()
+                    rootView.findViewById<EditText>(R.id.edt_address) .text.toString()
                 emp.hireDate =
                     Utils.getDateFromString((rootView.findViewById<View>(R.id.edt_date) as TextView).text.toString())
             }

@@ -1,5 +1,7 @@
 package com.examples.android.androidtrainingbzu.Adapters
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.examples.android.androidtrainingbzu.Adapters.EmployeesAdapter.EmpInfoViewHolder
+import com.examples.android.androidtrainingbzu.EmployeeDetailActivity
+import com.examples.android.androidtrainingbzu.EmployeeDetailFragment
 import com.examples.android.androidtrainingbzu.EmployeeListActivity
 import com.examples.android.androidtrainingbzu.Models.Employee
 import com.examples.android.androidtrainingbzu.R
@@ -44,8 +48,7 @@ class EmployeesAdapter(
     }
 
     inner class EmpInfoViewHolder(itemView: View, val mAdapter: EmployeesAdapter) :
-        RecyclerView.ViewHolder(itemView) {
-        //            implements View.OnClickListener, View.OnLongClickListener{
+        RecyclerView.ViewHolder(itemView),View.OnClickListener {
         val txtvu_name: TextView
         val txtvu_address: TextView
         val txtvu_phone: TextView
@@ -62,41 +65,25 @@ class EmployeesAdapter(
             txtvu_id = itemView.findViewById<View>(R.id.txtvu_id) as TextView
             txtvu_hiredate = itemView.findViewById<View>(R.id.txtvu_hiredate) as TextView
             img_avatar = itemView.findViewById<View>(R.id.img_pic) as ImageView
-            //            itemView.setOnClickListener(this);
-//            itemView.setOnLongClickListener(this);
-        } //        /**
-        //         * Called when a view has been clicked.
-        //         *
-        //         * @param v The view that was clicked.
-        //         */
-        //        @Override
-        //        public void onClick(View v) {
-        //            int mPosition = getLayoutPosition();
-        //            if (mTwoPane) {
-        //                Bundle arguments = new Bundle();
-        //                arguments.putInt(EmployeeDetailFragment.ARG_ITEM_ID,mPosition);
-        //                EmployeeDetailFragment fragment = new EmployeeDetailFragment();
-        //                fragment.setArguments(arguments);
-        //                mParentActivity.getSupportFragmentManager().beginTransaction()
-        //                        .replace(R.id.employee_detail_container, fragment)
-        //                        .commit();
-        //            } else {
-        //                Context context = v.getContext();
-        //                Intent intent = new Intent(context, EmployeeDetailActivity.class);
-        //                intent.putExtra(EmployeeDetailFragment.ARG_ITEM_ID, mPosition);
-        //                context.startActivity(intent);
-        //            }
-        //        }
-        //        /**
-        //         * Called when a view has been clicked and held.
-        //         *
-        //         * @param v The view that was clicked and held.
-        //         * @return true if the callback consumed the long click, false otherwise.
-        //         */
-        //        @Override
-        //        public boolean onLongClick(View v) {
-        //            return false;
-        //        }
+            itemView.setOnClickListener(this);
+        }
+
+        override fun onClick(p0: View?) {
+                        val mPosition:Int = getLayoutPosition()
+                        if (mTwoPane) {
+                            val arguments = Bundle()
+                            arguments.putInt(EmployeeDetailFragment.ARG_ITEM_ID,mPosition);
+                            val fragment =  EmployeeDetailFragment()
+                            fragment.setArguments(arguments);
+                            mParentActivity.getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.employee_detail_container, fragment)
+                                    .commit();
+                        } else {
+                            val intentA=Intent(p0?.context,EmployeeDetailActivity::class.java)
+                            intentA.putExtra(EmployeeDetailFragment.ARG_ITEM_ID, mPosition)
+                            p0?.context?.startActivity(intentA)
+                        }
+        }
     }
 
     init {

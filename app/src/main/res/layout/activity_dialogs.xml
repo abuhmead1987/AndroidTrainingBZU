@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DialogsActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".DialogsActivity">
 
     <TextView
         android:id="@+id/txt_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Time:..."
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Time:..." />
 
     <Button
         android:id="@+id/btn_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pick Time Using Fragment"
         android:gravity="center"
-        android:onClick="pickTime"/>
+        android:onClick="pickTime"
+        android:text="Pick Time Using Fragment" />
 
     <TextView
         android:id="@+id/txt_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date:..."
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Date:..." />
 
     <Button
         android:id="@+id/btn_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pick Date"
         android:gravity="center"
-        android:onClick="pickDate"/>
+        android:onClick="pickDate"
+        android:text="Pick Date" />
+
     <Button
         android:id="@+id/btn_showSnackbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Snackbar"
+        android:background="@drawable/btn_bg2_9"
         android:gravity="center"
         android:onClick="showSnackbar"
-        android:background="@drawable/btn_bg2_9"/>
+        android:text="Show Snackbar" />
 
 </LinearLayout>

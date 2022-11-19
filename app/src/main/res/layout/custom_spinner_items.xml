@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:padding="5dp"
         android:src="@drawable/emp_pic3" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="fill_parent"

@@ -86,9 +86,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/emp_id"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_pic"
-        android:textAlignment="center"/>
+        app:layout_constraintTop_toBottomOf="@+id/img_pic" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

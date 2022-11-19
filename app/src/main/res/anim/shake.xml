@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/overshoot_interpolator"
-    android:fillAfter="true">
+    android:fillAfter="true"
+    android:interpolator="@android:anim/overshoot_interpolator">
 
     <translate
+        android:duration="100"
+        android:fromXDelta="0%p"
         android:startOffset="100"
-        android:fromXDelta="0%p"
-        android:toXDelta="5%p"
-        android:duration="100" />
+        android:toXDelta="5%p" />
 
     <translate
+        android:duration="160"
+        android:fromXDelta="0%p"
         android:startOffset="150"
-        android:fromXDelta="0%p"
-        android:toXDelta="-10%p"
-        android:duration="160" />
+        android:toXDelta="-10%p" />
 
 
     <translate
+        android:duration="170"
+        android:fromXDelta="0%p"
         android:startOffset="260"
-        android:fromXDelta="0%p"
-        android:toXDelta="10%p"
-        android:duration="170" />
+        android:toXDelta="10%p" />
 
 
     <translate
+        android:duration="180"
+        android:fromXDelta="0%p"
         android:startOffset="380"
-        android:fromXDelta="0%p"
-        android:toXDelta="-10%p"
-        android:duration="180" />
+        android:toXDelta="-10%p" />
 
 
     <translate
-        android:startOffset="510"
+        android:duration="140"
         android:fromXDelta="0%p"
-        android:toXDelta="5%p"
-        android:duration="140" />
+        android:startOffset="510"
+        android:toXDelta="5%p" />
 </set>
 
 

@@ -44,7 +44,8 @@
             android:name=".Brodcasts.DownloadFileFinishedReceiver"
             android:enabled="true"
             android:exported="true"
-            android:permission="android.permission.ACCESS_NETWORK_STATE" />
+            android:permission="android.permission.ACCESS_NETWORK_STATE"
+            tools:ignore="Instantiatable" />
 
         <activity android:name=".AlarmActivity" />
 
@@ -92,6 +93,7 @@
         <activity android:name=".DialogsActivity" />
         <activity
             android:name=".WebviewActivity"
+            android:exported="true"
             android:icon="@drawable/internet_ico"
             android:label="Demo Browser"
             android:theme="@style/StyledActivity">
@@ -106,7 +108,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewsActivity_1" />
-        <activity android:name=".ReceiveTextActivity">
+        <activity
+            android:name=".ReceiveTextActivity"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -139,7 +143,9 @@
         <activity
             android:name=".LongTextActivity"
             android:theme="@style/StyledActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

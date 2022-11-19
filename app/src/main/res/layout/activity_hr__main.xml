@@ -80,8 +80,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Load From Firebase"
-                android:onClick="callInitialize"/>
+                android:onClick="callInitialize"
+                android:text="Load From Firebase" />
         </TableRow>
 
         <TableRow
@@ -93,16 +93,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Load From SQLite"
-                android:onClick="callInitialize"/>
+                android:onClick="callInitialize"
+                android:text="Load From SQLite" />
 
             <Button
                 android:id="@+id/btn_LoadFromWebAPI"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="Load From Web API"
-                android:onClick="callInitialize"/>
+                android:onClick="callInitialize"
+                android:text="Load From Web API" />
         </TableRow>
 
     </TableLayout>

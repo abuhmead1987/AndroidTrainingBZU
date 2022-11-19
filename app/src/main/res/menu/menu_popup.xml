@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_popup1"
-        android:title="Popup Sync"
-        android:icon="@android:drawable/ic_popup_sync"></item>
-    <item android:id="@+id/menu_popup2"
-        android:title="Popup Search"
-        android:icon="@android:drawable/ic_menu_search"></item>
+    <item
+        android:id="@+id/menu_popup1"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="Popup Sync"></item>
+    <item
+        android:id="@+id/menu_popup2"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Popup Search"></item>
 
 </menu>

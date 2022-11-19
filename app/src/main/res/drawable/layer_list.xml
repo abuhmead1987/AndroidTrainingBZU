@@ -2,16 +2,23 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item>
-        <bitmap android:src="@drawable/btn_bg"
-            android:gravity="center" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/btn_bg" />
     </item>
 
-    <item android:top="20dp" android:left="20dp">
-        <bitmap android:src="@drawable/btn_sync_icon"
-            android:gravity="center" />
+    <item
+        android:left="20dp"
+        android:top="20dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/btn_sync_icon" />
     </item>
-    <item android:top="10dp" android:left="10dp">
-        <bitmap android:src="@drawable/ic_launcher_background"
-            android:gravity="center" />
+    <item
+        android:left="10dp"
+        android:top="10dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_launcher_background" />
     </item>
 </layer-list>

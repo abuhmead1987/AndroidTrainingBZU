@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,51 +14,51 @@
             android:id="@+id/btn_startLongActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/show_long_text_activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="@string/show_long_text_activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startLifecycleActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Lifecycle Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Lifecycle Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startActivityResul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Result Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
+            android:onClick="startNewActivity"
+            android:text="Start Result Activity"
             android:textAllCaps="false"
-            />
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startimplicitActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start implicit intent Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
+            android:onClick="startNewActivity"
+            android:text="Start implicit intent Activity"
             android:textAllCaps="false"
-            />
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_startWebviewActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Webview Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
+            android:onClick="startNewActivity"
+            android:text="Start Webview Activity"
             android:textAllCaps="false"
-            />
+            android:textColor="#FFFFFF" />
 
 
         <Button
@@ -67,146 +66,160 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_butoon"
+            android:fontFamily="@font/abril_fatface"
             android:onClick="startNewActivity"
             android:text="Constraint L, Img V, RG, RB, Chk Bx, Spinner and Font"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/abril_fatface"/>
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startDialogsActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Dialogs Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Dialogs Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startScaleGestureDetectorActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Scale Gesture Detector Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Scale Gesture Detector Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startMotionEventActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Motion Event Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Motion Event Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startMenuActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Menus Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Menus Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startTabsActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Tabs Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Tabs Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_startLoadImagesActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Asynctask Asynctaskloader Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Asynctask Asynctaskloader Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startChecFormkActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Form Check Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Form Check Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startCustomBrodcastActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Custom Broadcast Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Custom Broadcast Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startCustomDownloadManagerActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Custom Download Manager Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Custom Download Manager Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_downloadFileUsingService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Download File Using Service Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Download File Using Service Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_openNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Notification Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Notification Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_JobServiceActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Job Service Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Job Service Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_AlarmActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Alarm Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Alarm Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_languageAndSharedPreferencesActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Language Shared Preferences Activity"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start Language Shared Preferences Activity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/btn_startRecyclerViewActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start RecyclerView Different sources Activity Activity - HR"
-            android:onClick="startNewActivity"
             android:background="@drawable/rounded_butoon"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            android:onClick="startNewActivity"
+            android:text="Start RecyclerView Different sources Activity Activity - HR"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </ScrollView>

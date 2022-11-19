@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WebviewActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".WebviewActivity">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/edt_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="url"
             android:hint="Url"
             android:inputType="textUri"
-            android:text="@string/map_url"
-            android:contentDescription="url"/>
+            android:text="@string/map_url" />
 
         <ImageButton
             android:id="@+id/btn_selectContact"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:onClick="loadURL"
-            android:src="@drawable/btn_sync_icon"
-            android:background="@null"
             android:layout_gravity="right|center_vertical"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter" />
+            android:background="@null"
+            android:onClick="loadURL"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_sync_icon" />
     </FrameLayout>
 
     <WebView

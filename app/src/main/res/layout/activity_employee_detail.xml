@@ -35,7 +35,7 @@
                 android:id="@+id/imgvu_emp_pic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/emp_pic6"/>
+                app:srcCompat="@drawable/emp_pic6" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

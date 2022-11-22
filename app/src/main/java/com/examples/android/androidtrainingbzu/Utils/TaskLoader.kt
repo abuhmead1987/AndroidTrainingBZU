@@ -14,7 +14,7 @@ import javax.net.ssl.HttpsURLConnection
 class TaskLoader(context: Context, var murl: String?) : AsyncTaskLoader<Bitmap?>(context) {
     override fun loadInBackground(): Bitmap? {
         var conn: HttpURLConnection? = null
-        var `is`: InputStream? = null
+        var isr: InputStream? = null
         try {
             val requestURL = URL(murl)
             conn = requestURL.openConnection() as HttpURLConnection
@@ -24,8 +24,8 @@ class TaskLoader(context: Context, var murl: String?) : AsyncTaskLoader<Bitmap?>
             conn.doInput = true
             conn.connect()
             return if (conn.responseCode == HttpsURLConnection.HTTP_OK) {
-                `is` = conn.inputStream
-                BitmapFactory.decodeStream(`is`)
+                isr = conn.inputStream
+                BitmapFactory.decodeStream(isr)
             } else {
                 null
             }
@@ -33,9 +33,9 @@ class TaskLoader(context: Context, var murl: String?) : AsyncTaskLoader<Bitmap?>
             Log.e(DownloadFileAsyncTask::class.java.simpleName, ex.message!!)
         } finally {
             conn?.disconnect()
-            if (`is` != null) {
+            if (isr != null) {
                 try {
-                    `is`.close()
+                    isr.close()
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }

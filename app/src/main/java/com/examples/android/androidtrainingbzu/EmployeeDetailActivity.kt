@@ -34,9 +34,9 @@ class EmployeeDetailActivity : AppCompatActivity() {
                 if (empListIndex == -1) {
                     emp = Employee()
                     emp.picResID = R.drawable.emp_pic7
-                    HR_MainActivity.Companion.employeeLinkedList!!.add(emp)
+                    HR_MainActivity.employeeLinkedList!!.add(emp)
                 } else {
-                    emp = HR_MainActivity.Companion.employeeLinkedList!!.get(empListIndex)!!
+                    emp = HR_MainActivity.employeeLinkedList!!.get(empListIndex)!!
                 }
                 emp.name =
                     rootView!!.findViewById<EditText>(R.id.edt_name) .text.toString()

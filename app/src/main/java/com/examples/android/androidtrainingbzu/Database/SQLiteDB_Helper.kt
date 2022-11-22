@@ -13,6 +13,9 @@ import java.util.*
 
 class SQLiteDB_Helper private constructor(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+
+
+
     override fun onCreate(sqLiteDatabase: SQLiteDatabase) {
         sqLiteDatabase.execSQL(DATABASE_DEFINITIONS.toString())
     }
@@ -23,7 +26,7 @@ class SQLiteDB_Helper private constructor(context: Context) :
     }
 
     fun insertEmployee(employee: Employee): Boolean {
-        return try {
+      return   try {
             databaseWritableManager!!.execSQL("INSERT INTO " + EMPLOYEE_TABLE +
                     "           (ID" +
                     "           ,name" +
@@ -82,6 +85,7 @@ class SQLiteDB_Helper private constructor(context: Context) :
 
     val employeesCount: Int
         get() = try {
+            //+" where ID =10 and name like '%moh%'"
             val employeesCursor =
                 databaseReadableManager!!.rawQuery("SELECT count(*)as count FROM " + EMPLOYEE_TABLE,
                     null)
@@ -177,6 +181,8 @@ class SQLiteDB_Helper private constructor(context: Context) :
     init {
         DATABASE_DEFINITIONS.append("CREATE TABLE " + EMPLOYEE_TABLE +
                 " (ID INTEGER PRIMARY KEY, name TEXT, email TEXT, phone TEXT, address TEXT, dept TEXT, picResPath TEXT, picResID INTEGER, hireDate DATE );")
+        DATABASE_DEFINITIONS.append("CREATE TABLE TEMP1 (ID INTEGER, DESC_VAL TEXT);")
+
         if (databaseWritableManager == null) databaseWritableManager = writableDatabase
         if (databaseReadableManager == null) databaseReadableManager = readableDatabase
     }
